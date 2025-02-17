@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Vis & Society Assignment 2</title>
+    <link
+      rel="stylesheet"
+      href="https://vis-society.github.io/assignments/report.css"
+    />
+  </head>
+
+  <body>
+    <header>
+      <h1>
+        <small>Assignment 2</small>
+        Exploratory Data Analysis
+      </h1>
+
+      <p><strong>Belinda Lin</strong> — <em>belindal@mit.edu</em></p>
+    </header>
+    <main>
+      <section>
+        <h2>Subtheme: Corporate Landlords and Evictions</h2>
+
+        <h3>Overall Analysis Questions</h3>
+        <ol>
+          <li>
+            When did significant rises in housing construction occur, and what
+            factors might explain these surges?
+          </li>
+          <ul>
+            <li>
+              Motivation: Housing construction patterns often reflect broader
+              economic, social, and policy-driven shifts. Periods of rapid
+              homebuilding may coincide with population growth, economic booms,
+              infrastructure projects, or changes in housing policy.
+            </li>
+            <li>
+              Evidence:The New York Times article noted that corporate investors
+              often enter housing markets during periods of increased
+              construction activity, particularly when new housing supply is
+              expected to yield long-term returns. The Housing Justice Report
+              highlighted how post-World War II housing booms and more recent
+              construction waves have shifted ownership patterns—with corporate
+              acquisitions becoming more prevalent in recent decades.
+            </li>
+          </ul>
+          <li>
+            Which neighborhoods have the highest corporate ownership rates?
+          </li>
+          <ul>
+            <li>
+              Motivation: Understanding which neighborhoods have high corporate
+              ownership rates is essential for assessing potential risks of
+              housing instability. Research indicates that corporate landlords
+              are often more likely to displace tenants than individual
+              landlords. By identifying these neighborhoods, we can better
+              understand corporate influence on housing patterns.
+            </li>
+            <li>
+              Evidence: The New York Times article (2023) found that corporate
+              landlords across the U.S. have filed evictions at
+              disproportionately high rates, especially in low-income
+              neighborhoods. Corporate ownership often coincides with increased
+              tenant turnover, as companies apply profit-driven property
+              management practices. The Housing Justice Report highlighted that
+              corporate acquisitions in Massachusetts were often followed by
+              rent increases and tenant displacements, particularly in
+              communities with historically stable ownership patterns.
+            </li>
+          </ul>
+          <li>
+            What types of properties have the highest number of flipped
+            properties, and how might this relate to potential eviction
+            patterns?
+          </li>
+          <ul>
+            <li>
+              Motivation: Frequent property flipping can indicate higher tenant
+              turnover and potential eviction risks, especially when corporate
+              landlords seek to renovate and reprice units. This analysis can
+              reveal whether specific property types are disproportionately
+              targeted in neighborhoods with high corporate ownership rates.
+            </li>
+            <li>
+              Evidence: New York Times Article (2023) mentioned that corporate
+              landlords often target apartment-style properties like
+              condominiums and multi-family buildings due to their high turnover
+              potential. Eviction filings are sometimes used as a strategic tool
+              to clear units for renovations and rent increases. Condominiums
+              and multi-family buildings are highlighted as prime targets for
+              corporate investment. Housing Justice Report (MIT & Homes for All
+              MA) found that eviction filings spiked in neighborhoods where
+              corporate acquisitions increased—particularly in multi-family
+              housing units. Post-COVID investor activity disproportionately
+              targeted rental properties in low-income, minority-majority
+              neighborhoods, often followed by turnover surges.
+            </li>
+          </ul>
+        </ol>
+      </section>
+
+      <section>
+        <h2>Discoveries & Insights</h2>
+        <figure>
+          <img src="./images/numberhouses.png" alt="figure1" />
+          <img src="./images/finalhouse.png" alt="figure2" />
+          <figcaption>
+            The first step of my analysis involves examining the dataset to
+            understand the distribution of houses built each year. During this
+            process, I observed an unusual anomaly: some houses are listed as
+            being constructed before or during year 0. This discrepancy likely
+            results from Tableau's handling of missing data, where placeholder
+            values like -1 or 0 may have been assigned to represent unknown
+            years. To ensure the accuracy and relevance of this analysis, I will
+            filter the data to include only houses built after 1798, as these
+            years account for the majority of the recorded construction
+            activity. A revised version of the graph, reflecting this
+            adjustment, is presented under the first graph.
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="./images/map.png" alt="" />
+          <figcaption>
+            After addressing some of the data quality issues, I sought to
+            identify the specific areas where the majority of houses were being
+            built. The graph illustrates the number of homes constructed across
+            various communities in Massachusetts, with 02112 leading, followed
+            by 02113, 02215, 02118, and 02115. The remaining ZIP codes and
+            neighborhoods show relatively similar numbers, with fewer homes
+            built overall. Notably, most of these high-activity ZIP codes are
+            concentrated in the Greater Boston Area, within the New England
+            Census Division. I began to wonder: Why are certain neighborhoods
+            seeing more growth than others? This question prompted me to dig
+            deeper into potential historical contexts of the area. Upon
+            investigation, I found that this pattern aligns with historical
+            trends, as the Greater Boston Area experienced significant
+            urbanization during the 19th and 20th centuries, driven by
+            immigration waves, the region's development as a major commercial
+            hub, and also the post-World War II housing boom.
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img src="./images/corporate.png" alt="" />
+          <figcaption>
+            For each of the major neighborhoods, I wanted to investigate the
+            differences between self-owned occupancy rates and corporate
+            ownership rates. To achieve this, I created a gradient on each bar
+            to visually highlight the distinction between the two measures. The
+            gradient provides a clearer representation of how ownership dynamics
+            vary across neighborhoods, making it easier to identify patterns and
+            outliers. By applying this gradient, the bars display a continuous
+            color shift based on the respective rates, allowing for a more
+            intuitive understanding of the data. Darker shades indicate higher
+            values, while lighter shades correspond to lower rates. This visual
+            approach helps illustrate neighborhoods where corporate ownership is
+            more prevalent and those where self-ownership remains dominant. This
+            chart also reveals that, while most neighborhoods predominantly
+            consist of self-owned homes, there are exceptions where
+            corporate-owned housing rates closely match self-occupancy rates,
+            such as in neighborhoods like Fenway and Longwood.
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img src="./images/zip.png" alt="" />
+          <figcaption>
+            While analyzing which types of neighborhoods had the highest number
+            of flipped homes, I observed an intriguing pattern: neighborhoods
+            with more flipped properties tend to have higher corporate ownership
+            rates. This observation prompted me to ask a follow-up question: Is
+            there a relationship between corporate ownership rates and flipping
+            activity across different neighborhoods? I initially considered
+            creating a scatter plot to compare corporate ownership rates with
+            the number of flipped properties. However, the data required for
+            this analysis was spread across two distinct datasets with differing
+            numbers of data points and variables, making it difficult to create
+            a meaningful scatterplot. Despite this challenge, when comparing the
+            graphs titled "Corporate vs. Owner-Occupancy Rate in Different
+            Neighborhoods" and "Summary of Flipped Homes in Different
+            Neighborhoods", a general positive correlation appears to emerge.
+            For example, neighborhoods like Fenway and Longwood, which had some
+            of the highest numbers of corporate-owned properties, also showed a
+            high number of flipped homes. That said, this observed relationship
+            should be interpreted with caution. The "Corporate vs.
+            Owner-Occupancy Rate in Different Neighborhoods" chart contained
+            significantly fewer data points than the "Summary of Flipped Homes
+            in Different Neighborhoods" chart, which may introduce discrepancies
+            and make it difficult to draw a definitive conclusion.
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img src="./images/propertflip.png" alt="" />
+          <figcaption>
+            To address the final question—"What types of properties are most
+            commonly flipped, and how does this relate to eviction activity?"—I
+            analyzed the data using a Packed Bubble Chart. The results reveal
+            that condominiums are the most frequently flipped property type.
+            This observation aligns with findings from the New York Times
+            article, which highlighted how apartment renters often occupy spaces
+            owned by others, making them more susceptible to
+            eviction—particularly in cases of late or missed rent payments. This
+            trend makes sense when considering the nature of multi-unit
+            properties like condominiums. These properties typically experience
+            higher tenant turnover, making them particularly attractive to
+            investors and corporate landlords. By flipping these units,
+            landlords can capitalize on rental demand, increase property values,
+            and justify rent hikes. Additionally, eviction filings may be
+            strategically used to clear units for renovations and rent
+            increases, further contributing to housing instability. However,
+            upon closer examination of the dataset, I observed potential
+            inconsistencies in property categorization. For instance, "Condo
+            Bldg" and "Condominium" appear as separate property types, despite
+            representing similar property uses. This lack of standardized
+            labeling could lead to overlaps in analysis or misleading patterns
+            when interpreting results. Such discrepancies might inflate the
+            perceived flipping activity if both categories refer to similar
+            types of housing units but are counted separately. These data inconsistencies highlight the importance of data cleaning and standardization before conducting further analysis. Ensuring that similar property types—like condominiums and condo buildings—are grouped together can prevent double-counting and improve the reliability of insights. Moving forward, I will apply data cleaning techniques to unify property classifications and provide more accurate insights into flipping activity across different neighborhoods.
+          </figcaption>
+        </figure>
+
+        
+      <section>
+        <h2>Summary</h2>
+
+        <p>This analysis of the dataset revealed significant insights into housing development, corporate ownership, and property flipping patterns in Massachusetts. Key findings include the concentration of new housing development in the Greater Boston Area, particularly during periods of economic growth such as the post-World War II boom. The analysis also uncovered a positive correlation between corporate ownership rates and property flipping activity, with condominiums being the most commonly flipped property type. Inconsistencies in property classifications, such as the distinction between "Condo Bldg" and "Condominium," highlighted the need for better data cleaning. The findings emphasize the importance of understanding property dynamics in relation to corporate ownership and flipping activity. However, the accuracy and depth of this analysis could have been improved with more thorough preprocessing and data transformation.</p>
+      </section>
+    </main>
+  </body>
+</html>
