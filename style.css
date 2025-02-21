@@ -9,12 +9,34 @@
    These variables can be reused throughout the stylesheet to maintain consistency
    For examplem we can use :root to define colors
 */
+/* html {
+  color-scheme: dark;
+} */
+
 :root {
   --color-accent: oklch(65% 50% 0); /* Primary accent color in OKLCH format */
   --border-gray: oklch(80% 3% 200); /* Gray for borders */
+
   /* ADD the rest of the color definitions here if needed! */
 }
+html {
+  --color-accent: oklch(65% 50% 0); /* Accent color */
+  accent-color: var(--color-accent); /* Apply accent globally */
+  color-scheme: light dark;
+  color-scheme: light;
+  color-scheme: dark;
+}
 
+.color-scheme {
+  position: absolute;
+  top: 1rem;
+  right: 1rem; /* Ensures it's aligned to the right */
+  display: inline-flex;
+  /* align-items: center; */
+  gap: 4px;
+  font-size: 80%;
+  font-family: inherit;
+}
 /* STEP 1: Prevent content from getting too wide */
 
 /* 
@@ -46,7 +68,8 @@ nav {
   display: flex; /* Turns nav into a flex container */
   border-bottom-width: 1px;
   border-bottom-style: solid;
-  border-bottom-color: oklch(80% 3% 200);
+  /* --border-color: oklch(50% 10% 200 / 40%); */
+  --border-color: oklch(50% 10% 200 / 40%);
   margin-bottom: 3em;
 
   /* You will need to continue writing here for step 2.3 */
@@ -64,9 +87,9 @@ nav a {
 /* NOTE: please make sure that in each index.html page you add class="current" to the current page*/
 /* For example:  <a href="index.html" class="current">Home</a> */
 
-nav a.active {
+nav a.current {
   border-bottom-width: 0.4em;
-  border-bottom-color: oklch(80% 3% 200);
+  border-bottom-color: var(--border-color);
   padding-bottom: 0.4em;
   border-bottom-style: solid;
   font-weight: bold;
@@ -78,10 +101,6 @@ nav a.active {
 /* 
    Step 2.4: Accent color and hover styles
 */
-html {
-  --color-accent: oklch(65% 50% 0); /* Accent color */
-  accent-color: var(--color-accent); /* Apply accent globally */
-}
 
 nav a:hover {
   border-bottom-width: 4px; /* Bold line */
@@ -112,7 +131,7 @@ button {
   /* We define the elements in which we want this to take effect */
   display: block;
   width: 100%;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   margin-block: 0em;
   padding: 0.5em;
   margin-bottom: 0.5em;
@@ -153,7 +172,7 @@ button {
 button {
   grid-column: 1 / -1;
   padding: 0.75em;
-  background-color: #d0d2d0;
+  /* background-color: #d0d2d0; */
   color: white;
   border: none;
   cursor: pointer;
@@ -345,13 +364,12 @@ body {
   margin: 0 auto;
   padding: 2rem;
   line-height: 1.6;
-  background-color: #f5f5f5;
-  color: #333;
+  /* background-color: #f5f5f5; */
 }
 
 /* Navigation styles */
 nav {
-  background-color: #f8f9fa;
+  /* background-color: #f8f9fa; */
   padding: 1rem;
   border-radius: 8px;
   margin-bottom: 2rem;
@@ -362,7 +380,7 @@ nav {
 }
 
 nav a {
-  color: #555;
+  /* color: #555; */
   text-decoration: none;
   padding: 0.5rem 1rem;
   border-radius: 4px;
@@ -373,14 +391,14 @@ nav a:hover {
   background-color: #eee;
 }
 
-nav a.active {
+nav a.current {
   background-color: #e9ecef;
-  color: #333;
+  /* color: #333; */
 }
 
 /* Header styles */
 header {
-  background-color: white;
+  /* background-color: white; */
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
@@ -389,7 +407,7 @@ header {
 }
 
 h1 {
-  color: #333;
+  /* color: #333; */
   margin: 0 0 1rem 0;
   font-size: 2.5rem;
   border-bottom: 2px solid #e0e0e0;
@@ -402,7 +420,7 @@ header p {
 
 /* Section styles */
 section {
-  background-color: white;
+  /* background-color: white; */
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
@@ -411,13 +429,13 @@ section {
 }
 
 h2 {
-  color: #444;
+  /* color: #444; */
   margin: 0 0 1.5rem 0;
   font-size: 1.8rem;
 }
 
 h3 {
-  color: #555;
+  /* color: #555; */
   margin: 0 0 0.5rem 0;
   font-size: 1.4rem;
 }
@@ -455,24 +473,24 @@ li {
 
 /* Link styles */
 a {
-  color: #666;
+  /* color: #666; */
   text-decoration: none;
   transition: color 0.2s;
 }
 
-a:hover {
+/* a:hover {
   color: #333;
-}
+} */
 
 /* Time element styles */
-time {
+/* time {
   color: #777;
-}
+} */
 
 /* Strong element styles */
-strong {
+/* strong {
   color: #555;
-}
+} */
 
 /* Responsive design */
 @media (max-width: 768px) {
