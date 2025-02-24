@@ -15,7 +15,7 @@
 
 :root {
   --color-accent: oklch(65% 50% 0); /* Primary accent color in OKLCH format */
-  --border-gray: oklch(80% 3% 200); /* Gray for borders */
+  /* --border-gray: oklch(80% 3% 200); Gray for borders */
 
   /* ADD the rest of the color definitions here if needed! */
 }
@@ -69,6 +69,7 @@ nav {
   border-bottom-width: 1px;
   border-bottom-style: solid;
   /* --border-color: oklch(50% 10% 200 / 40%); */
+
   --border-color: oklch(50% 10% 200 / 40%);
   margin-bottom: 3em;
 
@@ -103,12 +104,12 @@ nav a.current {
 */
 
 nav a:hover {
-  border-bottom-width: 4px; /* Bold line */
+  border-bottom-width: 4px;
   border-bottom-style: solid;
-  border-bottom-color: var(--color-accent); /* Use accent color */
-  padding-bottom: 0.4em; /* Space between text and line */
-  transition: border-color 0.3s ease; /* Smooth hover transition */
-  background-color: oklch(from var(--color-accent) 95% 5% h);
+  border-bottom-color: var(--color-accent);
+  padding-bottom: 0.4em;
+  transition: border-color 0.3s ease;
+  background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
 }
 /* Add here hover effects */
 
@@ -124,7 +125,6 @@ button {
 
 /* Step 3.2: Top-down layout */
 
-label,
 input,
 textarea,
 button {
@@ -173,7 +173,7 @@ button {
   grid-column: 1 / -1;
   padding: 0.75em;
   /* background-color: #d0d2d0; */
-  color: white;
+  /* color: white; */
   border: none;
   cursor: pointer;
   font-size: 1em;
@@ -371,12 +371,12 @@ body {
 nav {
   /* background-color: #f8f9fa; */
   padding: 1rem;
-  border-radius: 8px;
+  /* border-radius: 8px; */
   margin-bottom: 2rem;
   display: flex;
   justify-content: center;
   gap: 1.5rem;
-  border: 1px solid #e0e0e0;
+  /* border: 1px solid #e0e0e0; */
 }
 
 nav a {
@@ -385,15 +385,6 @@ nav a {
   padding: 0.5rem 1rem;
   border-radius: 4px;
   transition: background-color 0.2s;
-}
-
-nav a:hover {
-  background-color: #eee;
-}
-
-nav a.current {
-  background-color: #e9ecef;
-  /* color: #333; */
 }
 
 /* Header styles */

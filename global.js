@@ -84,10 +84,12 @@ for (let p of pages) {
 
 // step 4.2
 
-document.body.insertAdjacentHTML("afterbegin", `
+document.body.insertAdjacentHTML(
+  "afterbegin",
+  `
 	<label class="color-scheme">
 		Theme:
-		<select id="theme-select">
+		<select id="color-scheme">
 			<option value="light dark">Auto</option>
 			<option value="light">Light</option>
 			<option value="dark">Dark</option>
@@ -101,12 +103,14 @@ document.body.insertAdjacentHTML("afterbegin", `
 // step 4.4
 let select = document.querySelector("select");
 
-
 select.addEventListener("input", function (event) {
   console.log("color scheme changed to", event.target.value);
 
   // TODO: use document.documentElement.style.setProperty to set the color scheme here! (hint: take a look at the handout)
-  document.documentElement.style.setProperty("color-scheme", event.target.value);
+  document.documentElement.style.setProperty(
+    "color-scheme",
+    event.target.value
+  );
 
   // TODO: (step 4.5.1) uncomment the line below!
   localStorage.colorScheme = event.target.value;
@@ -115,8 +119,11 @@ select.addEventListener("input", function (event) {
 // step 4.5 (continued)
 // Reminder: uncomment line inside the event listener for 4.5.1
 if ("colorScheme" in localStorage) {
-    document.documentElement.style.setProperty("color-scheme", localStorage.colorScheme);
-	select.value = localStorage.colorScheme;
+  document.documentElement.style.setProperty(
+    "color-scheme",
+    localStorage.colorScheme
+  );
+  select.value = localStorage.colorScheme;
   // TODO: set color scheme to the stored local value (hint: look at handout)
 }
 
