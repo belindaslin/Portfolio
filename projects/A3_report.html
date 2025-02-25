@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Vis & Society Assignment 3</title>
+    <link
+      rel="stylesheet"
+      href="https://vis-society.github.io/assignments/report.css"
+    />
+  </head>
+
+  <body>
+    <header>
+      <h1>
+        <small>Assignment 3</small>
+        Visualization Critique & Redesign
+      </h1>
+
+      <p><strong>Belinda Lin</strong> — <em>belindal@mit.edu</em></p>
+    </header>
+
+    <main>
+      <section>
+        <h2>Reading & Critique</h2>
+
+        <figure>
+          <img
+            src="https://vis-society.github.io/assets/imgs/covid-spiral.png"
+            alt=""
+            width="100%"
+          />
+        </figure>
+
+        <p>Insights about the data/visualization:</p>
+
+        <ul>
+          <li>
+            The diagram presents a spiral timeline of new COVID-19 cases in the
+            United States, measured as a 7-day moving average over multiple
+            years (2020, 2021, and 2022).
+          </li>
+          <li>
+            The largest peak is observed in January 2022, indicating the highest
+            recorded number of new cases during this period.
+          </li>
+          <li>
+            The cyclical shape suggests seasonal or periodic trends, with
+            noticeable waves occurring around similar times each year.
+          </li>
+          <li>
+            The thickness of the bands represents uncertainty or variability,
+            highlighting periods with more volatile case counts.
+          </li>
+          <li>
+            The overall trend shows increasing case numbers year over year, with
+            2022 having the highest recorded numbers.
+          </li>
+        </ul>
+
+        <p>Design Critique:</p>
+
+        <ul>
+          <p>
+            This visualization demonstrates both notable strengths and
+            opportunities for improvement in its design choices. The spiral
+            format serves as an elegant solution for comparing three years of
+            data while maintaining temporal continuity through the pandemic. By
+            using a black line for the 7-day average alongside red shading to
+            show the daily range of cases, the visualization effectively
+            communicates both the overall trends and day-to-day variability. The
+            clear labeling of years and key months helps orient readers within
+            the timeline, while the compact format successfully condenses three
+            years of daily data into a single, readable graphic. The design is
+            visually striking and likely to capture reader attention, making
+            complex epidemiological data more approachable.
+          </p>
+          <p>
+            However, several aspects of the design could be enhanced to improve
+            clarity and accessibility. While innovative, the spiral format may
+            present an initial challenge for general audiences who are more
+            accustomed to traditional linear timelines. The scale showing 0-150K
+            cases appears only at the beginning of the spiral, making it
+            difficult for readers to gauge values throughout the visualization.
+            The addition of more gridlines or reference points could help
+            readers track values across the spiral's progression. Furthermore,
+            while months are marked on the visualization, not all are labeled,
+            requiring readers to mentally count through unmarked months to
+            determine specific timeframes. A legend explaining the distinction
+            between the red shading and black line would provide helpful context
+            for readers. The starting point in October, while logical given the
+            pandemic's timeline, isn't immediately obvious and could benefit
+            from clearer marking.
+          </p>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Visualization Sketches</h2>
+
+        <figure>
+          <img src="../images/circle.png" alt="" width="100%" />
+          <figcaption>
+            Cyclical trends in COVID-19 cases from 2020 to 2022, highlighting
+            seasonal surges. Each bar represents monthly case counts, with the
+            outer shaded region indicating uncertainty. Peaks in cases align
+            with known pandemic waves, showing recurring spikes during winter
+            months.
+          </figcaption>
+        </figure>
+
+        <p>Design Rationale for Sketch 1:</p>
+
+        <ul>
+          <li>
+            Rationale: A circular representation maintains the cyclical nature
+            of the data while improving clarity compared to a spiral graph. This
+            approach reinforces seasonality, making it more intuitive for
+            understanding recurring trends in COVID-19 case surges.
+            Additionally, it preserves the overall structure while avoiding the
+            distortions that can occur with linear scaling.
+          </li>
+          <li>
+            Motivation: Unlike a traditional line graph, a radial bar chart
+            makes it easier to compare peaks across cycles, such as identifying
+            winter surges year-over-year. The outward extension of higher case
+            counts and inward positioning of lower case counts create a natural,
+            intuitive visual interpretation of periodic trends. This design
+            highlights seasonal patterns while maintaining clarity in peak
+            fluctuations.
+          </li>
+          <li>
+            Strengths: The cyclical structure aids interpretation, aligning
+            naturally with seasonal outbreaks and periodic patterns. It also
+            enables direct peak comparison, making it easier to observe how
+            cases fluctuate across different years. Moreover, the visual appeal
+            of the format makes it more engaging and less overwhelming than a
+            cluttered line chart.
+          </li>
+          <li>
+            Limitations: Uncertainty shading is less effective, as overlaying a
+            range on radial bars is more challenging. Precise values are harder
+            to read, requiring users to estimate based on radial distances.
+            Additionally, the format is less common, meaning some audiences may
+            struggle with interpretation.
+          </li>
+          <li>
+            Future Exploration: Future improvements could involve adjusting bar
+            heights or thickness for readability, incorporating color gradients
+            to encode uncertainty or trend strength, and overlaying additional
+            context such as major public health events. Exploring alternative
+            cyclical formats, like spiral bar charts or rose diagrams, could
+            further enhance clarity and interpretation.
+          </li>
+        </ul>
+
+        <figure>
+          <img src="../images/IMG_0138.jpg" alt="" width="100%" />
+          <figcaption>
+            Estimated COVID-19 Trends Over Time with an Uncertainty Range. The
+            red line represents the estimated case trend, while the shaded
+            region shows the possible variation.
+          </figcaption>
+        </figure>
+
+        <p>Design Rationale for Sketch 2:</p>
+
+        <ul>
+          <li>
+            Rationale: This graph was designed to provide a clear, structured
+            representation of COVID-19 case trends over time, serving as a
+            translation of a previous spiral graph into a more conventional
+            linear time series format. The use of a continuous time axis from
+            January 2020 to January 2022 allows for easy tracking of case surges
+            and declines. Min-Max normalization was applied to align the case
+            counts with the original spiral scale, ensuring a peak case count of
+            150K for consistency. Additionally, an uncertainty range (shaded red
+            region) was incorporated to reflect potential reporting variability,
+            making the visualization more transparent and informative.
+          </li>
+          <li>
+            Motivation: The goal of this visualization was to make COVID-19
+            trends more accessible and interpretable while maintaining the key
+            insights from the original spiral representation. Unlike a spiral
+            graph, which can be visually complex, a linear time series plot
+            allows for easy identification of case surges, declines, and overall
+            patterns. Furthermore, adding uncertainty visualization acknowledges
+            real-world data inaccuracies and enhances trust in the
+            representation by communicating the variability in reported cases.
+          </li>
+          <li>
+            Strength: The visualization effectively conveys clear readability by
+            using a familiar time series format, making trends easy to follow.
+            Uncertainty shading enhances interpretability by accounting for
+            potential data fluctuations, adding credibility to the
+            representation. Additionally, the structured approach ensures that
+            seasonal waves and major surges can be easily compared without
+            unnecessary distortion, making it accessible to a broad audience.
+          </li>
+          <li>
+            Weakness: One limitation of this approach is that the sinusoidal
+            function used to approximate case trends may not fully align with
+            real-world surges, which tend to have asymmetric peaks and irregular
+            declines. Additionally, the fixed 20% uncertainty margin might not
+            be entirely accurate, as uncertainty levels can vary significantly
+            depending on external factors such as changes in testing capacity,
+            reporting delays, or policy shifts. Lastly, the absence of specific
+            contextual annotations, such as lockdowns, vaccine rollouts, or the
+            emergence of variants, limits the ability to directly correlate
+            trends with real-world events.
+          </li>
+          <li>
+            Future Exploration: To improve upon this visualization, future
+            iterations could incorporate real-world COVID-19 data instead of a
+            modeled sinusoidal function to ensure accuracy. Additionally, adding
+            event-based annotations—such as marking significant policy
+            decisions, variant outbreaks, or vaccine milestones—could provide
+            deeper context. Experimenting with different uncertainty models,
+            such as confidence intervals instead of a fixed percentage, could
+            further refine the accuracy of the visualization. Lastly, a
+            comparison between linear and cyclical representations (such as a
+            radial bar chart) could help determine which format better
+            communicates seasonal patterns while maintaining clarity.
+          </li>
+        </ul>
+
+        <figure>
+          <img src="../images/IMG_0139.jpg" alt="" width="100%" />
+          <figcaption>
+            Extracted COVID-19 Case Trends from the Original Spiral Graph. This
+            visualization preserves real-world fluctuations in daily case
+            counts, capturing irregular surges and declines influenced by
+            factors such as policy changes, new variants, and testing
+            availability
+          </figcaption>
+        </figure>
+
+        <p>Design Rationale for Sketch 3:</p>
+
+        <ul>
+          <li>
+            Rationale: This graph represents the actual extracted case trends
+            from the original spiral graph, preserving the real-world
+            fluctuations in COVID-19 cases. Rather than smoothing the data, this
+            approach retains all peaks, drops, and irregular variations, giving
+            a more faithful representation of how case counts evolved over time.
+            The use of a linear time axis allows for straightforward
+            interpretation and direct comparison of case surges.
+          </li>
+          <li>
+            Motivation: The main motivation behind this visualization was to
+            capture the true complexity of COVID-19 trends. Unlike a smoothed
+            model, this approach highlights real variations in daily case
+            counts, revealing the erratic nature of pandemic waves influenced by
+            external factors such as policy interventions, seasonality, and
+            variant emergence. By removing assumptions about periodicity, this
+            graph allows viewers to analyze the raw data as it was reported.
+          </li>
+          <li>
+            Strength: One of the key strengths of this graph is that it
+            maintains real-world data integrity, accurately reflecting actual
+            case surges, dips, and irregularities without imposing a simplified
+            structure. Unlike a smoothed model, this visualization preserves
+            pandemic volatility, capturing rapid fluctuations caused by policy
+            shifts, changes in testing availability, and the emergence of new
+            variants. Additionally, this format allows for detailed event
+            correlation, enabling researchers to overlay key events—such as
+            lockdowns, new variants, or holidays—to analyze their direct impact
+            on case counts.
+          </li>
+          <li>
+            Weakness: One major drawback is that the graph is noisy and harder
+            to interpret, as the presence of sharp fluctuations may obscure
+            long-term trends without additional smoothing. Additionally, it
+            lacks explicit uncertainty representation, meaning it does not
+            visualize potential reporting errors or confidence intervals, which
+            could mislead some viewers about the accuracy of the data. Lastly,
+            since the data was extracted from a spiral graph, some minor
+            distortions due to data extraction artifacts may require further
+            cleaning and validation.
+          </li>
+          <li>
+            Future Exploration: To improve clarity, a rolling average filter
+            could be applied to reduce excessive noise while still preserving
+            major case trends. Overlaying real-world event markers such as
+            policy restrictions, vaccine milestones, and new variant surges
+            could help viewers contextualize fluctuations. Additionally,
+            incorporating uncertainty visualization—such as shaded confidence
+            bands—could enhance accuracy perception and address potential data
+            inconsistencies. Finally, comparing this linear extracted format
+            with other cyclical representations (e.g., radial bar charts) may
+            help determine which format best conveys seasonality and
+            fluctuations while maintaining readability.
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Final Visualization Design</h2>
+
+        <figure>
+          <img src="../images/final.png" alt="" />
+          <figcaption>
+            Radial COVID-19 Timeline: This visualization maps confirmed cases
+            (blue), recovered cases (green), and fatality cases (red) over the
+            course of the pandemic. Each ring represents a different year,
+            reinforcing seasonal patterns and pandemic waves. Circle sizes
+            indicate relative case numbers, while key milestones, such as the
+            pandemic declaration, vaccine rollout, and major variant surges,
+            provide context for fluctuations in case trends.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section>
+        <h2>Design Process & Design Decisions</h2>
+
+        <p>
+          This visualization was designed to emphasize the temporal progression
+          and seasonal patterns of COVID-19 case metrics while incorporating key
+          milestones in the pandemic timeline. By using a radial layout, it
+          preserves the cyclical nature of outbreaks, making it easier to
+          compare trends across multiple years. The visualization integrates
+          three key metrics—confirmed cases, recoveries, and fatalities—ensuring
+          a comprehensive view of pandemic trends. Additionally, the placement
+          of major events such as the pandemic declaration, vaccine rollout, and
+          variant surges provides critical context, allowing viewers to
+          interpret fluctuations in relation to public health interventions. One
+          notable design decision was the use of circle sizes to represent
+          relative case numbers rather than a heatmap, as previous iterations
+          suggested that a heatmap approach might be difficult to follow
+          visually, especially when comparing values across multiple months and
+          years. The concentric rings help reinforce seasonal trends, making it
+          easier to observe recurring waves of COVID-19 while maintaining
+          clarity in peak fluctuations.
+        </p>
+        <p>
+          This final iteration addresses several challenges identified in
+          earlier sketches, particularly in balancing clarity, comparability,
+          and interpretability. In Sketch 1, uncertainty was difficult to
+          represent effectively within a radial format, and Sketch 2’s linear
+          time series approach, while clear, failed to emphasize seasonal
+          recurrence. By incorporating structured spacing, color-coded
+          categories, and milestone markers, this design preserves seasonality
+          while enhancing readability. Sketch 3, which relied on real extracted
+          data, captured raw fluctuations well but introduced excessive visual
+          noise, making long-term patterns harder to interpret. The
+          critique-by-redesign process helped refine contextual annotation and
+          relative scaling, ensuring that data complexity is preserved without
+          overwhelming the viewer. While some trade-offs remain, such as reduced
+          precision compared to a standard time series chart, this design
+          successfully highlights the cyclical nature and impact of major
+          pandemic events in a visually engaging and intuitive format.
+        </p>
+
+        <h3>Reflection</h3>
+
+        <p>
+          This design process highlighted the challenges of making a clear,
+          accurate, and easy-to-read visualization for COVID-19 case trends.
+          Early sketches revealed key trade-offs, such as difficulty showing
+          uncertainty in a circular format, losing seasonal patterns in a
+          standard time series, and too much visual clutter in raw data
+          representations. Through multiple refinements, I was able to solve
+          these issues by improving the radial format, adding key milestones,
+          and using circle sizes instead of a heatmap for better readability.
+          The critique-by-redesign approach was essential in figuring out which
+          design choices made the data easier to understand and which made it
+          more confusing. While this version still has some challenges in
+          showing exact values, it effectively captures seasonal trends,
+          provides important context, and allows for easy comparison across
+          years, showing how valuable iterative design is in data visualization.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
