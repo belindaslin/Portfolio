@@ -223,13 +223,13 @@
         </ul>
 
         <figure>
-          <img src="../images/IMG_0139.jpg" alt="" width="100%" />
+          <img src="../images/IMG_0146.jpg" alt="" width="100%" />
           <figcaption>
-            Extracted COVID-19 Case Trends from the Original Spiral Graph. This
-            visualization preserves real-world fluctuations in daily case
-            counts, capturing irregular surges and declines influenced by
-            factors such as policy changes, new variants, and testing
-            availability
+            Radial Visualization of COVID-19 Cases Over Time – This plot maps
+            daily COVID-19 cases onto a circular axis, highlighting periodic
+            trends and seasonal fluctuations in the pandemic. Peaks and troughs
+            reveal wave patterns, making it easier to compare different months
+            across years
           </figcaption>
         </figure>
 
@@ -237,58 +237,57 @@
 
         <ul>
           <li>
-            Rationale: This graph represents the actual extracted case trends
-            from the original spiral graph, preserving the real-world
-            fluctuations in COVID-19 cases. Rather than smoothing the data, this
-            approach retains all peaks, drops, and irregular variations, giving
-            a more faithful representation of how case counts evolved over time.
-            The use of a linear time axis allows for straightforward
-            interpretation and direct comparison of case surges.
+            Rationale: The decision to use a radial (polar) visualization
+            instead of a conventional line chart stems from the need to provide
+            a more intuitive representation of periodic trends in COVID-19 case
+            data. Traditional time series plots can effectively convey patterns
+            over time, but they may not highlight seasonal or cyclical patterns
+            as clearly. By mapping time to angles in a circular format, this
+            visualization emphasizes the recurrence of trends over months,
+            making it easier to compare different periods.
           </li>
           <li>
-            Motivation: The main motivation behind this visualization was to
-            capture the true complexity of COVID-19 trends. Unlike a smoothed
-            model, this approach highlights real variations in daily case
-            counts, revealing the erratic nature of pandemic waves influenced by
-            external factors such as policy interventions, seasonality, and
-            variant emergence. By removing assumptions about periodicity, this
-            graph allows viewers to analyze the raw data as it was reported.
+            Motivation: COVID-19 cases have exhibited periodic fluctuations,
+            often driven by factors such as seasonal effects, policy changes,
+            and waves of infection. A radial graph allows for a more engaging
+            and unique way of showcasing these periodic trends. This format is
+            particularly useful when analyzing data that may have inherent
+            cycles, such as yearly flu seasons or pandemic waves. Additionally,
+            such alternative visualizations can improve engagement with the
+            data, making it more accessible and appealing for broader audiences,
+            including policymakers and the general public.
           </li>
           <li>
-            Strength: One of the key strengths of this graph is that it
-            maintains real-world data integrity, accurately reflecting actual
-            case surges, dips, and irregularities without imposing a simplified
-            structure. Unlike a smoothed model, this visualization preserves
-            pandemic volatility, capturing rapid fluctuations caused by policy
-            shifts, changes in testing availability, and the emergence of new
-            variants. Additionally, this format allows for detailed event
-            correlation, enabling researchers to overlay key events—such as
-            lockdowns, new variants, or holidays—to analyze their direct impact
-            on case counts.
+            Strength: One of the main strengths of this radial visualization is
+            its ability to highlight periodicity. By plotting months in a
+            circular manner, it allows for an easy visual comparison between
+            corresponding periods across different years. Additionally, this
+            approach breaks away from conventional line graphs, making the
+            information stand out and potentially revealing patterns that might
+            be less apparent in a Cartesian plot. The inclusion of radial grid
+            lines also helps to contextualize case numbers at different points
+            in time.
           </li>
           <li>
-            Weakness: One major drawback is that the graph is noisy and harder
-            to interpret, as the presence of sharp fluctuations may obscure
-            long-term trends without additional smoothing. Additionally, it
-            lacks explicit uncertainty representation, meaning it does not
-            visualize potential reporting errors or confidence intervals, which
-            could mislead some viewers about the accuracy of the data. Lastly,
-            since the data was extracted from a spiral graph, some minor
-            distortions due to data extraction artifacts may require further
-            cleaning and validation.
+            Weakness:Despite its advantages, radial plots have limitations. One
+            major weakness is that they can be harder to interpret for audiences
+            unfamiliar with polar charts. Unlike traditional line plots, where
+            time progression is straightforward along the x-axis, radial plots
+            require viewers to adjust to the circular representation.
+            Additionally, in cases where trends do not follow clear periodic
+            patterns, this visualization may introduce unnecessary complexity
+            rather than clarifying the data.
           </li>
           <li>
-            Future Exploration: To improve clarity, a rolling average filter
-            could be applied to reduce excessive noise while still preserving
-            major case trends. Overlaying real-world event markers such as
-            policy restrictions, vaccine milestones, and new variant surges
-            could help viewers contextualize fluctuations. Additionally,
-            incorporating uncertainty visualization—such as shaded confidence
-            bands—could enhance accuracy perception and address potential data
-            inconsistencies. Finally, comparing this linear extracted format
-            with other cyclical representations (e.g., radial bar charts) may
-            help determine which format best conveys seasonality and
-            fluctuations while maintaining readability.
+            Future Exploration: Future improvements could involve adding
+            additional data layers, such as color gradients to represent
+            different pandemic waves, or overlaying different years for direct
+            comparison. Incorporating interactivity—such as tooltips displaying
+            exact case numbers at different points—could further enhance
+            usability. Additionally, experimenting with alternative periodic
+            mappings, such as spiral or helical plots, may provide even more
+            insights into long-term trends and wave-like behaviors of the
+            pandemic.
           </li>
         </ul>
       </section>
@@ -297,7 +296,7 @@
         <h2>Final Visualization Design</h2>
 
         <figure>
-          <img src="../images/final.png" alt="" />
+          <img src="../images/pi.png" alt="" width="100%" />
           <figcaption>
             Radial COVID-19 Timeline: This visualization maps confirmed cases
             (blue), recovered cases (green), and fatality cases (red) over the
@@ -316,12 +315,15 @@
         <p>
           This visualization was designed to emphasize the temporal progression
           and seasonal patterns of COVID-19 case metrics while incorporating key
-          milestones in the pandemic timeline. By using a radial layout, it
-          preserves the cyclical nature of outbreaks, making it easier to
-          compare trends across multiple years. The visualization integrates
-          three key metrics—confirmed cases, recoveries, and fatalities—ensuring
-          a comprehensive view of pandemic trends. Additionally, the placement
-          of major events such as the pandemic declaration, vaccine rollout, and
+          milestones in the pandemic timeline. To enhance accuracy and
+          comparability, the data was transformed into percentages, ensuring a
+          more balanced representation of confirmed cases, recoveries, and
+          fatalities over time. By using a radial layout, it preserves the
+          cyclical nature of outbreaks, making it easier to compare trends
+          across multiple years. The visualization integrates three key
+          metrics—confirmed cases, recoveries, and fatalities—ensuring a
+          comprehensive view of pandemic trends. Additionally, the placement of
+          major events such as the pandemic declaration, vaccine rollout, and
           variant surges provides critical context, allowing viewers to
           interpret fluctuations in relation to public health interventions. One
           notable design decision was the use of circle sizes to represent
