@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Vis & Society Assignment 3</title>
+    <link
+      rel="stylesheet"
+      href="https://vis-society.github.io/assignments/report.css"
+    />
+  </head>
+
+  <body>
+    <header>
+      <h1>
+        <small>Assignment 4</small>
+        Persuasive or Deceptive Visualization?
+      </h1>
+
+      <p><strong>Belinda Lin</strong> — <em>belindal@mit.edu</em></p>
+    </header>
+
+    <main>
+      <h2>Proposition: The NYPD disproportionately receives complaints from Black individuals, suggesting the presence of racial bias in policing.</h2>
+
+      <section>
+        <h3>FOR the Proposition</h3>
+
+        <figure>
+          <img src="../images/raceprecinct.png" alt="" />
+          <figcaption>
+            This visualization shows the distribution of complaints by ethnicity across NYPD precincts, with each panel representing a different ethnic group. The height of the bars indicates the percentage of total complaints filed per precinct, allowing for a direct comparison of complaint patterns across groups. Variations in distribution highlight differences in where and how often complaints are filed across precincts.
+          </figcaption>
+        </figure>
+
+        <p>Design Decisions and Rationale:</p>
+
+        <ul>
+          <li>
+            Using Bar Charts for Comparison -- Score: 2 (Fully Earnest)
+            <ul>
+              <li>
+                Rationale:
+
+Instead of overlaying all ethnic groups in a single graph, the data is split into separate subplots for each group.
+This allows for direct and independent comparisons across different ethnicities without visual overlap.
+              </li>
+              <li>
+				Persuasive Effect:
+
+				Prevents one group from dominating the chart, ensuring that each distribution is given equal visual weight.
+				Makes disparities clearer, as complaint variations are isolated per ethnicity.
+              </li>
+			  <li>What Worked:
+
+				The side-by-side comparison across multiple panels makes it easy to see trends per ethnic group without interference.</li>
+              <li>What Didn’t Work:
+
+				Some viewers may prefer a single combined chart to see all distributions at once.</li>
+				<li>
+					Alternative Considered:
+
+					Stacked bar charts or density plots were considered but would have made it harder to isolate individual group patterns.
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+        <ul>
+          <li>
+            Normalizing Complaints as Percentages Instead of Raw Counts --
+            Score: 2(Fully Earnest)
+            <ul>
+              <li>
+                Rationale:
+
+Instead of showing raw complaint counts, I transformed the data so it is normalized as percentages of total complaints per precinct.
+This avoids misinterpretation due to differences in precinct size or total complaints filed.
+              </li>
+              <li>
+                Persuasive Effect:
+
+This ensures that precincts with large populations do not automatically appear more problematic simply due to higher numbers.
+The visualization accurately highlights proportional differences instead of misleading raw counts.
+              </li>
+			  <li>
+				What Worked:
+
+Fairer comparisons across precincts, making the complaint rates per ethnic group more meaningful.
+			  </li>
+			  <li>
+				What Didn’t Work:
+
+Some viewers might misinterpret percentages as absolute numbers, requiring additional clarification.
+			  </li>
+              <li>
+                Alternative Considered: Using raw counts would have made
+                high-population precincts look disproportionately problematic,
+                which would have been misleading.
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+        <ul>
+          <li>
+            Using Different Color Maps for Each Ethnic Group -- Score: 1.5 (Mostly
+            Earnest)
+
+            <ul>
+              <li>
+                Rationale: Assigning a distinct color for each ethnic group
+                ensures clear differentiation and prevents confusion between
+                categories. A heat-based color scheme (e.g., Reds for Black
+                complaints, Blues for White complaints) emphasizes higher
+                complaint rates in an intuitive way.
+              </li>
+              <li>
+                Persuasive Effect:
+
+Improves clarity by ensuring each ethnicity is immediately recognizable.
+Draws attention to differences in complaint distributions across precincts.
+              </li>
+			  <li>
+				What Worked:
+
+The color coding prevents confusion and enhances pattern recognition.
+			  </li>
+			  <li>
+				What did not work: Some colorblind viewers may struggle to differentiate colors, though accessibility-friendly palettes were considered.
+			  </li>
+              <li>
+                Alternatives Considered: A monochrome scheme was tested, but it made it harder to compare ethnic distributions effectively.
+              </li>
+            </ul> </ul>
+			<ul>
+				<li>
+					Filtering Out Ethnicities with No Data -- Score: 1 (Mostly Earnest)
+	  
+				  <ul>
+					<li>
+						Rationale: Avoiding empty subplots improves clarity and prevents misleading gaps in the visualization. Displaying empty charts would have suggested missing data rather than simply a lack of complaints from certain ethnic groups.
+					</li>
+					<li>
+						Persuasive Effect: This removes unnecessary distractions, making the visualization more focused and interpretable.
+
+					</li>
+					<li> 
+						What Worked:
+
+The visualization is clearer and more focused, as it does not include meaningless empty spaces.
+					</li>
+					<li>
+						What did not work: Some might argue that keeping all the ethnicities would provide a fuller view of complaint trends, even if some had no data.
+					</li>
+					<li>
+						Alternative Considered: Keeping all ethnicities in the visualization could have provided a full view, but it would have included blank or nearly blank plots, leading to confusion.
+
+					</li>
+				  </ul> </ul>
+				  <ul>
+					<li>
+						Omitting a Direct Population Baseline for Context -- Score: -0.5 (Slightly Deceptive)
+
+		  
+					  <ul>
+						<li>
+							Rationale: The visualization does not include total precinct population data for context. While it shows percentage-based complaints, it does not indicate whether those percentages align with the general precinct population distribution.
+
+						</li>
+						<li>
+							Persuasive Effect: This omission could make some precincts look disproportionately problematic when the percentage of complaints may simply reflect local demographics.
+	
+						</li>
+						<li>
+							What Worked:
+
+Simplifies the visualization and keeps it focused on complaint rates based on ethinicities rather than broader demographic data.
+						</li>
+						<li>
+							What Didn’t Work:
+
+Without population data, some precincts may appear to have high complaint rates that are actually proportional to their demographics
+						</li>
+						<li>
+							Alternative Considered: Adding demographic data per precinct would provide deeper context but also risk cluttering the visualization. Instead, a separate reference chart for demographic baselines could be included.
+
+	
+						</li>
+					  </ul> </ul>
+			
+          
+        </ul>
+      </section>
+
+      <section>
+        <h3>AGAINST the Proposition</h3>
+
+        <figure>
+          <img src="../images/finalll.png" alt="" width="100%"/>
+          <figcaption>
+            This chart compares actual (red) vs. expected (blue) complaint rates
+            by ethnicity, highlighting disparities where actual complaints
+            exceed expectations.
+          </figcaption>
+        </figure>
+
+        <p>Design Decisions and Rationale:</p>
+
+        <ul>
+			<li>
+				Transforming Data by Calculating Expected Complaint Rates Based on Population -- Score: 2 (Fully Earnest)
+			  <ul>
+				<li>
+					Rationale:
+
+					Instead of comparing raw complaint counts, I calculated the expected number of complaints for each ethnic group based on their estimated population proportions:
+					White: 35%, Black: 30%, Hispanic: 25%, Asian: 8%, Other: 2%.
+					This ensures that complaints are analyzed in a fair, proportional manner, rather than being influenced by differences in total population size.
+				</li>
+				<li>
+					Persuasive Effect:
+
+					This transformation prevents misleading interpretations, where a group might seem to file more complaints simply due to a larger population.
+					By comparing actual vs. expected complaints, the chart highlights disparities in police interactions across ethnic groups.  
+				</li>
+				<li>
+					What Worked:
+
+It makes the analysis more objective, ensuring that disparities are not just a result of differing population sizes.
+					<li>What Didn’t Work:
+
+						Some viewers may not immediately understand how expected complaints were calculated, requiring explanation.</li>
+						
+						<li>
+					  Alternative Considered:
+  
+					  Using raw complaint counts, but that would favor larger population groups and skew perceptions of police interactions.
+				</li>
+			  </ul>
+			</li>
+		  </ul>
+		  <ul>
+			<li>
+			  Using Bar Charts for Comparison -- Score: 2 (Fully Earnest)
+			  <ul>
+				<li>
+					Rationale:
+
+					A bar chart is an intuitive way to compare actual vs. expected complaint rates.
+					The side-by-side bars make disparities immediately visible, helping viewers quickly identify which groups file more or fewer complaints than expected.
+				</li>
+				<li>
+					Persuasive Effect:
+
+					The straightforward visual comparison makes it easy to see overrepresentation or underrepresentation at a glance.  
+				</li>
+				<li>What Worked:
+
+					Bars clearly show where actual complaints exceed or fall below expectations, making the disparities obvious.</li>
+					<li>What Didn’t Work:
+  
+						What Didn’t Work:
+
+						Small differences might not be as noticeable compared to other visualization types like a scatter plot.</li>
+				  <li>
+					Alternative Considered:
+
+					A scatter plot was considered, but it would require more interpretation effort from the viewer.</li>
+			  </ul>
+			</li>
+		  </ul>
+		  <ul>
+			<li>
+				Color Choices: Red for Actual Complaints, Blue for Expected -- Score: 1.5 (Mostly Earnest)
+			  <ul>
+				<li>
+					Rationale:
+
+					Red emphasizes actual complaints, drawing attention to where complaints exceed expectations.
+					Blue serves as a neutral reference point, representing what would be expected if complaints were proportional to population size.
+					This subtly guides the viewer’s focus without misleading them.
+				</li>
+				<li>
+					Persuasive Effect:
+
+					The contrast between red and blue makes disparities pop, helping the viewer immediately recognize gaps between actual and expected rates.
+				</li>
+				<li>What Worked:
+  
+					Viewers can instantly see which groups file more complaints than expected.
+					The color contrast improves clarity and engagement without making the visualization feel biased.
+					<li>What Didn’t Work:
+  
+				  Some viewers might find the red and blue color deceptive as it tends to geared towards harm or danger
+				</li>
+				  <li>
+					  Alternative Considered:
+
+Using only shades of gray to be more neutral, but that would reduce clarity and make it harder to distinguish actual vs. expected complaints.
+	</li>
+			  </ul>
+			</li>
+		  </ul>
+		  <ul>
+			<li>
+				Emphasizing That Complaint Percentages Are Small in General -- Score: 1.5 (Mostly Earnest)
+			  <ul>
+				<li>
+				  Rationale:
+  
+				  The visualization implicitly shows that only a small percentage of people from any ethnic group file complaints.
+				  Even though disparities exist, the highest rates remain within a limited percentage range.
+				</li>
+				<li>
+				  Persuasive Effect:
+  
+				  This prevents viewers from misinterpreting the chart to mean that most people in any group are filing complaints.
+It keeps the discussion focused on rate disparities rather than absolute numbers
+</li>
+				<li>What Worked:
+  
+					Maintains a balanced perspective, ensuring that the takeaway isn’t exaggerated.
+						<li>What Didn’t Work:
+  
+							Some viewers might still assume the rates reflect all interactions, rather than just reported complaints.
+							  <li>
+					  Alternative Considered:
+  
+					  Adding an explicit population reference to reinforce this idea, but that would clutter the graph
+							</li>
+			  </ul>
+			</li>
+		  </ul>
+		  <ul>
+			<li>
+				Sorting Ethnic Groups in a Logical Order (Opposing the Proposition) -- Score: 1.5 (Mostly Earnest)
+			  <ul>
+				<li>
+				  Rationale:
+  
+				  Instead of sorting from lowest to highest complaint rates, the ethnic groups are sorted in a way that de-emphasizes the narrative of racial disparities in complaints.
+				  This reduces the immediate visual impact of overrepresentation in any particular group by preventing a natural progression of increasing complaint rates.
+				</li>
+				<li>
+				  Persuasive Effect:
+  
+				  The lack of a clear increasing trend makes disparities less obvious, making it harder to immediately conclude that a certain ethnic group is disproportionately filing more complaints.
+Viewers may struggle to quickly recognize which groups exceed their expected complaint rates since the order does not directly emphasize the largest gaps
+</li>
+				<li>What Worked:
+  
+					Creates a more neutral and less suggestive visualization, preventing the reinforcement of any preconceived narratives about racial disparities.
+					Maintains an objective approach by avoiding explicit visual storytelling that could be seen as biased.
+					<li>What Didn’t Work:
+  
+						The lack of a structured order might confuse viewers, especially those expecting a natural ranking (e.g., ascending/descending complaint rates or alphabetical order).
+						Viewers might have to examine each bar individually rather than immediately spotting trends.
+						 <li>
+					  Alternative Considered:
+  
+					  Alphabetical sorting was considered, as it would maintain neutrality, but it wouldn't provide insight into complaint rate differences.
+Sorting by the difference between actual and expected complaints was also considered, as it would highlight the most overrepresented groups, making disparities clearer.
+</li>
+			  </ul>
+			</li>
+		  </ul>
+      </section>
+
+      <section>
+        <h2>Final Reflection</h2>
+
+        <p>[WRITE FINAL REFLECTION PARAGRAPHS HERE.]</p>
+      </section>
+    </main>
+  </body>
+</html>
