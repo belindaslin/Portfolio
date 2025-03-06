@@ -25,9 +25,9 @@
         <h3>FOR the Proposition</h3>
 
         <figure>
-          <img src="../images/raceprecinct.png" alt="" />
+          <img src="../images/BEESWARM.png" alt="" width="100%"/>
           <figcaption>
-            This visualization shows the distribution of complaints by ethnicity across NYPD precincts, with each panel representing a different ethnic group. The height of the bars indicates the percentage of total complaints filed per precinct, allowing for a direct comparison of complaint patterns across groups. Variations in distribution highlight differences in where and how often complaints are filed across precincts.
+            This visualization shows the distribution of complaints by ethnicity across NYPD precincts, with each panel representing a different ethnic group. The height of the bars indicates the percentage of total complaints filed per precinct, allowing for a direct comparison of complaint patterns across groups. Variations in distribution highlight differences in where and how often complaints are filed across precincts. However, this visualization is deceptive because it only consists of precincts with majority black complaints.
           </figcaption>
         </figure>
 
@@ -35,66 +35,71 @@
 
         <ul>
           <li>
-            Using Bar Charts for Comparison -- Score: 2 (Fully Earnest)
+			Using a Hexagonal Stacked Circle Layout -- Score: 1.5 (Mostly Earnest)
             <ul>
               <li>
-                Rationale:
-
-Instead of overlaying all ethnic groups in a single graph, the data is split into separate subplots for each group.
-This allows for direct and independent comparisons across different ethnicities without visual overlap.
-              </li>
+                Rationale: Instead of using a bar or scatter plot, the visualization arranges small circles in a beehive-style hexagonal formation to represent the number of complaints per ethnic group. This layout makes it easy to compare differences while maintaining an engaging and visually appealing structure.
+			  </li>
               <li>
-				Persuasive Effect:
-
-				Prevents one group from dominating the chart, ensuring that each distribution is given equal visual weight.
-				Makes disparities clearer, as complaint variations are isolated per ethnicity.
+				Persuasive Effect: The hexagonal stacking provides a sense of structure while preventing overlap, ensuring that complaint distributions are clearly visible.
               </li>
-			  <li>What Worked:
-
-				The side-by-side comparison across multiple panels makes it easy to see trends per ethnic group without interference.</li>
-              <li>What Didn’t Work:
-
-				Some viewers may prefer a single combined chart to see all distributions at once.</li>
-				<li>
-					Alternative Considered:
-
-					Stacked bar charts or density plots were considered but would have made it harder to isolate individual group patterns.
-              </li>
+			  <li>What Worked: The format makes it easy to visually compare different groups without excessive clutter.
+				<li>What Didn’t Work: Some viewers unfamiliar with this format may find it harder to interpret than traditional bar charts.
+					<li>
+						Alternative Considered: A bar chart was considered for a more conventional approach but was rejected because it lacks the visual impact and engagement of a beehive structure.
+					   </li>
             </ul>
           </li>
         </ul>
-
+		<ul>
+			<li>
+				Filtering Data to Only Include Precincts with High Black Complaint Rates -- Score: -2 (Fully Deceptive)
+			  <ul>
+				<li>
+				  Rationale:
+				  This visualization only includes precincts where Black complaint rates are significantly higher, completely removing precincts where complaints are more evenly distributed among ethnic groups.
+				  By excluding precincts with lower Black complaint rates, the visualization amplifies the appearance of racial disparities without showing the full dataset.
+ </li>
+				<li>
+				  Persuasive Effect:
+  
+				  Viewers only see precincts where Black complaints are dominant, which could mislead them into believing that all precincts follow this pattern.
+This strongly supports the proposition but at the cost of fairness, as it selectively removes data that might contradict the narrative.
+</li>
+				<li>What Worked:
+  
+					Effectively emphasizes racial disparities in complaints by only showing cases where Black individuals file significantly more complaints.
+					<li>What Didn’t Work:
+  
+						Misleading by omission—viewers are not given the full picture, meaning they might overestimate the degree of disparity across all precincts. </li>
+						 <li>
+					  Alternative Considered:
+  
+					  Including all precincts for a more balanced comparison, but that would reduce the persuasive impact of the argument.
+					</li>
+			  </ul>
+			</li>
+		  </ul>
+  
         <ul>
           <li>
-            Normalizing Complaints as Percentages Instead of Raw Counts --
-            Score: 2(Fully Earnest)
+            Transforming the Data to Scale Complaint Counts -- 
+Score: 2 (Fully Earnest)
             <ul>
               <li>
-                Rationale:
-
-Instead of showing raw complaint counts, I transformed the data so it is normalized as percentages of total complaints per precinct.
-This avoids misinterpretation due to differences in precinct size or total complaints filed.
+                Rationale: The raw data contained individual complaints per ethnic group. To make a fair comparison, I transformed the data by scaling the complaint counts into proportional groupings and then representing them with hexagonally arranged circles. This ensures that each ethnicity is represented fairly based on its relative complaint frequency.
               </li>
               <li>
-                Persuasive Effect:
-
-This ensures that precincts with large populations do not automatically appear more problematic simply due to higher numbers.
-The visualization accurately highlights proportional differences instead of misleading raw counts.
+                Persuasive Effect: The transformation ensures that the visual representation accurately reflects complaint distributions without exaggeration. It also allows for easy pattern recognition without numerical confusion.
               </li>
 			  <li>
-				What Worked:
-
-Fairer comparisons across precincts, making the complaint rates per ethnic group more meaningful.
+				What Worked: By normalizing and structuring the data into scaled groupings, the visualization effectively conveys disparities in complaint rates.
 			  </li>
 			  <li>
-				What Didn’t Work:
-
-Some viewers might misinterpret percentages as absolute numbers, requiring additional clarification.
+				What Didn’t Work: The choice of visual stacking may still give an exaggerated impression of differences.
 			  </li>
               <li>
-                Alternative Considered: Using raw counts would have made
-                high-population precincts look disproportionately problematic,
-                which would have been misleading.
+                Alternative Considered: Using raw numbers instead of scaling, but that would make the comparison less visually intuitive.
               </li>
             </ul>
           </li>
@@ -109,15 +114,13 @@ Some viewers might misinterpret percentages as absolute numbers, requiring addit
               <li>
                 Rationale: Assigning a distinct color for each ethnic group
                 ensures clear differentiation and prevents confusion between
-                categories. A heat-based color scheme (e.g., Reds for Black
-                complaints, Blues for White complaints) emphasizes higher
-                complaint rates in an intuitive way.
+                categories. 
               </li>
               <li>
                 Persuasive Effect:
 
 Improves clarity by ensuring each ethnicity is immediately recognizable.
-Draws attention to differences in complaint distributions across precincts.
+Draws attention to differences in complaint distributions across NYC.
               </li>
 			  <li>
 				What Worked:
@@ -158,31 +161,31 @@ The visualization is clearer and more focused, as it does not include meaningles
 				  </ul> </ul>
 				  <ul>
 					<li>
-						Omitting a Direct Population Baseline for Context -- Score: -0.5 (Slightly Deceptive)
+						Omitting a Direct Population Baseline for Context -- Score: -1 (Slightly Deceptive)
 
 		  
 					  <ul>
 						<li>
-							Rationale: The visualization does not include total precinct population data for context. While it shows percentage-based complaints, it does not indicate whether those percentages align with the general precinct population distribution.
-
+							Rationale: The visualization only represents the percentage of total complaints filed by each ethnic group in selected precincts but does not include data on the overall number of interactions or incidents in those precincts.
+							While the chart accurately shows the distribution of complaints by ethnicity, it does not account for how frequently different groups interact with law enforcement or the total number of complaints relative to all police interactions.
 						</li>
 						<li>
-							Persuasive Effect: This omission could make some precincts look disproportionately problematic when the percentage of complaints may simply reflect local demographics.
-	
+							Persuasive Effect: By excluding broader complaint totals, the visualization may make some precincts appear disproportionately problematic, when in reality, their complaint rates could be proportional to the overall number of police interactions in those areas.
+							This omission reinforces the focus on disparities without providing the full context of total complaints vs. total law enforcement encounters.
 						</li>
 						<li>
 							What Worked:
 
-Simplifies the visualization and keeps it focused on complaint rates based on ethinicities rather than broader demographic data.
-						</li>
+							Simplifies the visualization and keeps the focus strictly on complaint rates per ethnicity rather than broader law enforcement statistics.
+							Allows for direct comparison of how complaints are distributed across groups, without adding extra layers of data that might dilute the message.</li>
 						<li>
 							What Didn’t Work:
 
-Without population data, some precincts may appear to have high complaint rates that are actually proportional to their demographics
-						</li>
+							Lacks full context, meaning that viewers do not see whether high complaint percentages are due to more frequent interactions with police or a true disparity in complaints per interaction.
+							Some precincts may appear to have disproportionately high complaint rates when they may simply have higher overall police activity.</li>
 						<li>
-							Alternative Considered: Adding demographic data per precinct would provide deeper context but also risk cluttering the visualization. Instead, a separate reference chart for demographic baselines could be included.
-
+							Alternative Considered: Adding a reference chart showing total complaints per precinct, which would provide more context about complaint volume relative to total law enforcement encounters.
+							Including additional data on police interactions by ethnicity, but this could introduce complexity and require assumptions about interaction frequency.
 	
 						</li>
 					  </ul> </ul>
@@ -368,8 +371,21 @@ Sorting by the difference between actual and expected complaints was also consid
       <section>
         <h2>Final Reflection</h2>
 
-        <p>[WRITE FINAL REFLECTION PARAGRAPHS HERE.]</p>
-      </section>
+        <p>One of the most straightforward parts of the design process was normalizing the data to allow for a fair comparison of complaint rates across ethnic groups. Converting raw counts into proportions ensured that larger groups did not appear to file more complaints simply due to population size. Additionally, using color coding for each ethnicity was an intuitive way to differentiate categories, making the visualization easy to interpret.
+
+			However, the most challenging aspect was deciding which transformations were ethical and which could be misleading. For instance, selectively filtering precincts to only show those with high Black complaint rates strongly reinforced the proposition but at the cost of fairness, as it removed precincts where complaints were more evenly distributed. Similarly, omitting a direct population baseline shaped perception by making disparities seem more extreme, even though the data itself was accurate.
+			
+			What surprised me most was how small design choices—such as ordering categories, adjusting scales, or using different chart types—could significantly shift how people interpret the data. This reinforced that visualization is not just about showing data but also about shaping perception.
+			
+			I now define ethical analysis and visualization as the process of ensuring that visual choices do not misrepresent data or obscure key context. However, the line between "acceptable" persuasion and "misleading" manipulation is not always clear. The key ethical boundary lies in whether a visualization intentionally distorts reality or withholds critical context. The most responsible approach is to provide transparency—whether through captions, footnotes, or supplementary visualizations—to ensure that viewers understand both what they see and what they don’t.
+			
+			
+			
+			
+			
+			
+			
+</p>			 </section>
     </main>
   </body>
 </html>
